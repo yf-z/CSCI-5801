@@ -1,0 +1,134 @@
+\hypertarget{classSTVElection}{}\section{S\+T\+V\+Election Class Reference}
+\label{classSTVElection}\index{S\+T\+V\+Election@{S\+T\+V\+Election}}
+
+
+The \hyperlink{classSTVElection}{S\+T\+V\+Election} class is a child class of the abstract \hyperlink{classElection}{Election} class that provides the necessary functionality to represent a Single-\/\+Transferrable Vote (ranked choice) election using the Droop algorithm. On top of all of the properties of the \hyperlink{classElection}{Election} class, the \hyperlink{classSTVElection}{S\+T\+V\+Election} class also has a value for the Droop quota, a value indicating whether to turn the \hyperlink{classBallot}{Ballot} shuffle on/off, and a vector that stores the order of the shuffled \hyperlink{classBallot}{Ballot} objects for the election.  
+
+
+
+
+{\ttfamily \#include $<$stv\+\_\+election.\+h$>$}
+
+
+
+Inheritance diagram for S\+T\+V\+Election\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classSTVElection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+T\+V\+Election\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classSTVElection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSTVElection_a7869d492ef2d932bd9439516f4252b75}{S\+T\+V\+Election} (std\+::string type, int seats, std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$ cands, std\+::vector$<$ \hyperlink{classBallot}{Ballot} $\ast$$>$ bals, bool shuffle)
+\item 
+void \hyperlink{classSTVElection_ac4e0339e3cb97add1a22c9af7233df17}{run\+Algorithm} () override
+\item 
+int \hyperlink{classSTVElection_a0f8e2dea0af2ecea795a79c6e0e63fe2}{get\+Droop} ()
+\item 
+bool \hyperlink{classSTVElection_aa8597739fd9823bbe8ea5a7fdb741f53}{get\+Shuffle\+Status} ()
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classSTVElection_a89e835eb11707dcba9f22a84c1d532f1}{get\+Shuffled\+Ballots} ()
+\item 
+std\+::string \hyperlink{classSTVElection_ae7efa73091c87add327d71ff5f943c3c}{get\+Results} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classSTVElection}{S\+T\+V\+Election} class is a child class of the abstract \hyperlink{classElection}{Election} class that provides the necessary functionality to represent a Single-\/\+Transferrable Vote (ranked choice) election using the Droop algorithm. On top of all of the properties of the \hyperlink{classElection}{Election} class, the \hyperlink{classSTVElection}{S\+T\+V\+Election} class also has a value for the Droop quota, a value indicating whether to turn the \hyperlink{classBallot}{Ballot} shuffle on/off, and a vector that stores the order of the shuffled \hyperlink{classBallot}{Ballot} objects for the election. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSTVElection_a7869d492ef2d932bd9439516f4252b75}\label{classSTVElection_a7869d492ef2d932bd9439516f4252b75}} 
+\index{S\+T\+V\+Election@{S\+T\+V\+Election}!S\+T\+V\+Election@{S\+T\+V\+Election}}
+\index{S\+T\+V\+Election@{S\+T\+V\+Election}!S\+T\+V\+Election@{S\+T\+V\+Election}}
+\subsubsection{\texorpdfstring{S\+T\+V\+Election()}{STVElection()}}
+{\footnotesize\ttfamily S\+T\+V\+Election\+::\+S\+T\+V\+Election (\begin{DoxyParamCaption}\item[{std\+::string}]{type,  }\item[{int}]{seats,  }\item[{std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$}]{cands,  }\item[{std\+::vector$<$ \hyperlink{classBallot}{Ballot} $\ast$$>$}]{bals,  }\item[{bool}]{shuffle }\end{DoxyParamCaption})}
+
+The constructor for the \hyperlink{classSTVElection}{S\+T\+V\+Election} class utilizes the constructor of the \hyperlink{classElection}{Election} class to set the type, number of seats, the Candidates in the election, and the Ballots in the election. It the sets the shuffle status of the \hyperlink{classSTVElection}{S\+T\+V\+Election} to the value in shuffle. It also calculates the Droop quota here and defaults the vector that stores the order of the shuffled \hyperlink{classBallot}{Ballot} objects for the election to hold the ints 0 to the number of Ballotsin the election. 
+\begin{DoxyParams}{Parameters}
+{\em type} & a string that indicates the election type \\
+\hline
+{\em seats} & an int that indicates the number of seats in the election \\
+\hline
+{\em cands} & a vector of Candidates who are up for election \\
+\hline
+{\em bals} & a vector of Ballots that were cast in the election \\
+\hline
+{\em shuffle} & a boolean that indicates whether to turn the \hyperlink{classBallot}{Ballot} shuffle on/off \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSTVElection_a0f8e2dea0af2ecea795a79c6e0e63fe2}\label{classSTVElection_a0f8e2dea0af2ecea795a79c6e0e63fe2}} 
+\index{S\+T\+V\+Election@{S\+T\+V\+Election}!get\+Droop@{get\+Droop}}
+\index{get\+Droop@{get\+Droop}!S\+T\+V\+Election@{S\+T\+V\+Election}}
+\subsubsection{\texorpdfstring{get\+Droop()}{getDroop()}}
+{\footnotesize\ttfamily int S\+T\+V\+Election\+::get\+Droop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the droop quota of the \hyperlink{classSTVElection}{S\+T\+V\+Election} object \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classSTVElection_ae7efa73091c87add327d71ff5f943c3c}\label{classSTVElection_ae7efa73091c87add327d71ff5f943c3c}} 
+\index{S\+T\+V\+Election@{S\+T\+V\+Election}!get\+Results@{get\+Results}}
+\index{get\+Results@{get\+Results}!S\+T\+V\+Election@{S\+T\+V\+Election}}
+\subsubsection{\texorpdfstring{get\+Results()}{getResults()}}
+{\footnotesize\ttfamily std\+::string S\+T\+V\+Election\+::get\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This method returns the result of an election with S\+TV algorithm \begin{DoxyAuthor}{Author}
+Yifan Zhang (zhan4372) 
+\end{DoxyAuthor}
+
+
+Implements \hyperlink{classElection_a6a6f4f301db86628b8d962281a19bf74}{Election}.
+
+\mbox{\Hypertarget{classSTVElection_a89e835eb11707dcba9f22a84c1d532f1}\label{classSTVElection_a89e835eb11707dcba9f22a84c1d532f1}} 
+\index{S\+T\+V\+Election@{S\+T\+V\+Election}!get\+Shuffled\+Ballots@{get\+Shuffled\+Ballots}}
+\index{get\+Shuffled\+Ballots@{get\+Shuffled\+Ballots}!S\+T\+V\+Election@{S\+T\+V\+Election}}
+\subsubsection{\texorpdfstring{get\+Shuffled\+Ballots()}{getShuffledBallots()}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ S\+T\+V\+Election\+::get\+Shuffled\+Ballots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the vector of shullfed index of ballots of the \hyperlink{classSTVElection}{S\+T\+V\+Election} object \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classSTVElection_aa8597739fd9823bbe8ea5a7fdb741f53}\label{classSTVElection_aa8597739fd9823bbe8ea5a7fdb741f53}} 
+\index{S\+T\+V\+Election@{S\+T\+V\+Election}!get\+Shuffle\+Status@{get\+Shuffle\+Status}}
+\index{get\+Shuffle\+Status@{get\+Shuffle\+Status}!S\+T\+V\+Election@{S\+T\+V\+Election}}
+\subsubsection{\texorpdfstring{get\+Shuffle\+Status()}{getShuffleStatus()}}
+{\footnotesize\ttfamily bool S\+T\+V\+Election\+::get\+Shuffle\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the status of the shullfle option of the \hyperlink{classSTVElection}{S\+T\+V\+Election} object \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classSTVElection_ac4e0339e3cb97add1a22c9af7233df17}\label{classSTVElection_ac4e0339e3cb97add1a22c9af7233df17}} 
+\index{S\+T\+V\+Election@{S\+T\+V\+Election}!run\+Algorithm@{run\+Algorithm}}
+\index{run\+Algorithm@{run\+Algorithm}!S\+T\+V\+Election@{S\+T\+V\+Election}}
+\subsubsection{\texorpdfstring{run\+Algorithm()}{runAlgorithm()}}
+{\footnotesize\ttfamily void S\+T\+V\+Election\+::run\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This is the primary function which is used to run the algorithm to determine winners and losers for an S\+TV \hyperlink{classElection}{Election}. It shuffles the ballots if necessary, initially distributes them to candidates, and then relies on the redistribute() function to handle ballot redistribution from there on out. It also makes use of the \hyperlink{classElection_abd52b6c894a9f2a0a0a104e9f290f9a7}{write\+To\+Audit\+File()} to write the necessary information for election auditing to the designated text file. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+
+
+Implements \hyperlink{classElection_a059659576ebb0416ecd8005f684461d6}{Election}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ritch167/csci5801/repo-\/\+Team4/\+Project1/src/stv\+\_\+election.\+h\end{DoxyCompactItemize}

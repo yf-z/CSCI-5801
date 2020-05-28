@@ -1,0 +1,99 @@
+\hypertarget{classPluralityElection}{}\section{Plurality\+Election Class Reference}
+\label{classPluralityElection}\index{Plurality\+Election@{Plurality\+Election}}
+
+
+The \hyperlink{classPluralityElection}{Plurality\+Election} class is a child class of the abstract \hyperlink{classElection}{Election} class that provides the necessary functionality to represent a Plurality election.  
+
+
+
+
+{\ttfamily \#include $<$plurality\+\_\+election.\+h$>$}
+
+
+
+Inheritance diagram for Plurality\+Election\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classPluralityElection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Plurality\+Election\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classPluralityElection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPluralityElection_a03dd61a9d6738ec26e80d10acb02df7d}{Plurality\+Election} (std\+::string type, int seats, std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$ cands, std\+::vector$<$ \hyperlink{classBallot}{Ballot} $\ast$$>$ bals)
+\item 
+void \hyperlink{classPluralityElection_a9517806e8ba40496c49013acc7ad9ca5}{run\+Algorithm} () override
+\item 
+std\+::string \hyperlink{classPluralityElection_a60f88a34588ca87678b0f5367adf1a55}{get\+Results} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classPluralityElection}{Plurality\+Election} class is a child class of the abstract \hyperlink{classElection}{Election} class that provides the necessary functionality to represent a Plurality election. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPluralityElection_a03dd61a9d6738ec26e80d10acb02df7d}\label{classPluralityElection_a03dd61a9d6738ec26e80d10acb02df7d}} 
+\index{Plurality\+Election@{Plurality\+Election}!Plurality\+Election@{Plurality\+Election}}
+\index{Plurality\+Election@{Plurality\+Election}!Plurality\+Election@{Plurality\+Election}}
+\subsubsection{\texorpdfstring{Plurality\+Election()}{PluralityElection()}}
+{\footnotesize\ttfamily Plurality\+Election\+::\+Plurality\+Election (\begin{DoxyParamCaption}\item[{std\+::string}]{type,  }\item[{int}]{seats,  }\item[{std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$}]{cands,  }\item[{std\+::vector$<$ \hyperlink{classBallot}{Ballot} $\ast$$>$}]{bals }\end{DoxyParamCaption})}
+
+The constructor for the \hyperlink{classPluralityElection}{Plurality\+Election} class utilizes the constructor of the \hyperlink{classElection}{Election} class to set the type, number of seats, the Candidates in the election, and the Ballots in the election. 
+\begin{DoxyParams}{Parameters}
+{\em type} & a string that indicates the election type \\
+\hline
+{\em seats} & an int that indicates the number of seats in the election \\
+\hline
+{\em cands} & a vector of Candidates who are up for election \\
+\hline
+{\em bals} & a vector of Ballots that were cast in the election \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPluralityElection_a60f88a34588ca87678b0f5367adf1a55}\label{classPluralityElection_a60f88a34588ca87678b0f5367adf1a55}} 
+\index{Plurality\+Election@{Plurality\+Election}!get\+Results@{get\+Results}}
+\index{get\+Results@{get\+Results}!Plurality\+Election@{Plurality\+Election}}
+\subsubsection{\texorpdfstring{get\+Results()}{getResults()}}
+{\footnotesize\ttfamily std\+::string Plurality\+Election\+::get\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This method gets the result of running the plurality algorithm. It returns a string variable that contains the results of the plurality election, as well as the Candidates and their vote percentage. Also, the string contains who won and who lost. \begin{DoxyAuthor}{Author}
+Yiwen Xu (xu000515) 
+\end{DoxyAuthor}
+
+
+Implements \hyperlink{classElection_a6a6f4f301db86628b8d962281a19bf74}{Election}.
+
+\mbox{\Hypertarget{classPluralityElection_a9517806e8ba40496c49013acc7ad9ca5}\label{classPluralityElection_a9517806e8ba40496c49013acc7ad9ca5}} 
+\index{Plurality\+Election@{Plurality\+Election}!run\+Algorithm@{run\+Algorithm}}
+\index{run\+Algorithm@{run\+Algorithm}!Plurality\+Election@{Plurality\+Election}}
+\subsubsection{\texorpdfstring{run\+Algorithm()}{runAlgorithm()}}
+{\footnotesize\ttfamily void Plurality\+Election\+::run\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This method is responsible for running the election based on the plurality algorithm. \begin{DoxyAuthor}{Author}
+Yiwen Xu (xu000515) 
+\end{DoxyAuthor}
+
+
+Implements \hyperlink{classElection_a059659576ebb0416ecd8005f684461d6}{Election}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ritch167/csci5801/repo-\/\+Team4/\+Project1/src/plurality\+\_\+election.\+h\end{DoxyCompactItemize}

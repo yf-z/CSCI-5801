@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['getassignedstatus',['getAssignedStatus',['../classCandidate.html#ac00fcb7914f89cca8bb02ed2e6d6f4e4',1,'Candidate']]],
+  ['getauditfilepath',['getAuditFilePath',['../classElection.html#ae55fafa9a82cca3c20b2343fed3f7250',1,'Election']]],
+  ['getballots',['getBallots',['../classElection.html#abd0c0a7649a3f5d87541e3f65fec7244',1,'Election']]],
+  ['getballotsfor',['getBallotsFor',['../classCandidate.html#a2bd33d32107aa062ef8bd82e8b2ee7e9',1,'Candidate']]],
+  ['getballotsforsize',['getBallotsForSize',['../classCandidate.html#abe5eb062e31ef3602b4434e5e9f1e596',1,'Candidate']]],
+  ['getcandidates',['getCandidates',['../classBallot.html#a7e8730a109ded9c1deeafe75bd1ad55c',1,'Ballot::getCandidates()'],['../classElection.html#a1514ca134f88464b026cc51da5076d29',1,'Election::getCandidates()']]],
+  ['getcurrentchoice',['getCurrentChoice',['../classBallot.html#ae76fc12248878a72a1817adc9fc8361c',1,'Ballot']]],
+  ['getdroop',['getDroop',['../classSTVElection.html#a0f8e2dea0af2ecea795a79c6e0e63fe2',1,'STVElection']]],
+  ['getid',['getId',['../classBallot.html#a1ff11d3400230f4837fdec904d7e66fd',1,'Ballot::getId()'],['../classCandidate.html#a50e7cd31dc68665860932987ad2ffea6',1,'Candidate::getId()']]],
+  ['getlosers',['getLosers',['../classElection.html#a34dfd0c1c6519073d38e85790c839f8b',1,'Election']]],
+  ['getname',['getName',['../classCandidate.html#af862d92e21d66d74f1d5cae92937d3da',1,'Candidate']]],
+  ['getnumseats',['getNumSeats',['../classElection.html#a0b68106ee52f33286364ef5d617d77ee',1,'Election']]],
+  ['getresults',['getResults',['../classElection.html#a6a6f4f301db86628b8d962281a19bf74',1,'Election::getResults()'],['../classPluralityElection.html#a60f88a34588ca87678b0f5367adf1a55',1,'PluralityElection::getResults()'],['../classSTVElection.html#ae7efa73091c87add327d71ff5f943c3c',1,'STVElection::getResults()']]],
+  ['getshuffledballots',['getShuffledBallots',['../classSTVElection.html#a89e835eb11707dcba9f22a84c1d532f1',1,'STVElection']]],
+  ['getshufflestatus',['getShuffleStatus',['../classSTVElection.html#aa8597739fd9823bbe8ea5a7fdb741f53',1,'STVElection']]],
+  ['gettype',['getType',['../classElection.html#ae49e7f5d36d4afc23ed81b4df4ae658c',1,'Election']]],
+  ['getwhengotfirstballot',['getWhenGotFirstBallot',['../classCandidate.html#acb99e3ce6e39413c36b1181f67b870ff',1,'Candidate']]],
+  ['getwinners',['getWinners',['../classElection.html#a8cc211952aa00399649c8660eb62189c',1,'Election']]]
+];

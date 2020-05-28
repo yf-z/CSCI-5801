@@ -1,0 +1,171 @@
+\hypertarget{classCandidate}{}\section{Candidate Class Reference}
+\label{classCandidate}\index{Candidate@{Candidate}}
+
+
+The \hyperlink{classCandidate}{Candidate} class provides the necessary functionality to represent a candidate in an election. It is able to represent candidates in both plurality and single-\/tranferrable vote elections. A \hyperlink{classCandidate}{Candidate} had an Id, a name, a forward-\/linked list of \hyperlink{classBallot}{Ballot} objects assigned to them, a int representing the count of how many Ballots are assigned to them, double representing the time of when they received their first \hyperlink{classBallot}{Ballot} in an election (needed for S\+TV elections), and boolean indicating whether the \hyperlink{classCandidate}{Candidate} has been declared a winner or a loser yet.  
+
+
+
+
+{\ttfamily \#include $<$candidate.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCandidate_a58b3815b3b93c161c47165e3725b704a}{Candidate} (int id, std\+::string name)
+\item 
+int \hyperlink{classCandidate_a50e7cd31dc68665860932987ad2ffea6}{get\+Id} ()
+\item 
+std\+::string \hyperlink{classCandidate_af862d92e21d66d74f1d5cae92937d3da}{get\+Name} ()
+\item 
+std\+::list$<$ \hyperlink{classBallot}{Ballot} $\ast$ $>$ \hyperlink{classCandidate_a2bd33d32107aa062ef8bd82e8b2ee7e9}{get\+Ballots\+For} ()
+\item 
+void \hyperlink{classCandidate_abbe882aa5bad2f1b769c3df933495703}{add\+Ballot} (\hyperlink{classBallot}{Ballot} $\ast$new\+\_\+ballot)
+\item 
+\hyperlink{classBallot}{Ballot} $\ast$ \hyperlink{classCandidate_a329eae2002b3584594dd10c92b5f6f51}{remove\+Ballot} ()
+\item 
+int \hyperlink{classCandidate_abe5eb062e31ef3602b4434e5e9f1e596}{get\+Ballots\+For\+Size} ()
+\item 
+double \hyperlink{classCandidate_acb99e3ce6e39413c36b1181f67b870ff}{get\+When\+Got\+First\+Ballot} ()
+\item 
+void \hyperlink{classCandidate_a97be1d696ea97201ec69a75bf708d9f2}{set\+When\+Got\+First\+Ballot} (double time)
+\item 
+bool \hyperlink{classCandidate_ac00fcb7914f89cca8bb02ed2e6d6f4e4}{get\+Assigned\+Status} ()
+\item 
+void \hyperlink{classCandidate_a9b407c109b00124423fbe4a722a503c2}{set\+Assigned\+Status} (bool status)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classCandidate}{Candidate} class provides the necessary functionality to represent a candidate in an election. It is able to represent candidates in both plurality and single-\/tranferrable vote elections. A \hyperlink{classCandidate}{Candidate} had an Id, a name, a forward-\/linked list of \hyperlink{classBallot}{Ballot} objects assigned to them, a int representing the count of how many Ballots are assigned to them, double representing the time of when they received their first \hyperlink{classBallot}{Ballot} in an election (needed for S\+TV elections), and boolean indicating whether the \hyperlink{classCandidate}{Candidate} has been declared a winner or a loser yet. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCandidate_a58b3815b3b93c161c47165e3725b704a}\label{classCandidate_a58b3815b3b93c161c47165e3725b704a}} 
+\index{Candidate@{Candidate}!Candidate@{Candidate}}
+\index{Candidate@{Candidate}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{Candidate()}{Candidate()}}
+{\footnotesize\ttfamily Candidate\+::\+Candidate (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+The constructor for the \hyperlink{classCandidate}{Candidate} class sets the initial id of the ballot and the \hyperlink{classCandidate}{Candidate} object\textquotesingle{}s name. It defaults the count of its \hyperlink{classBallot}{Ballot} objects for to 0, when they got their first ballot to -\/1.\+0, and their winner/loser assigned status to false. 
+\begin{DoxyParams}{Parameters}
+{\em id} & an int that the Id of the \hyperlink{classCandidate}{Candidate} object will be set to \\
+\hline
+{\em name} & a string that the name of the \hyperlink{classCandidate}{Candidate} will be set to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCandidate_abbe882aa5bad2f1b769c3df933495703}\label{classCandidate_abbe882aa5bad2f1b769c3df933495703}} 
+\index{Candidate@{Candidate}!add\+Ballot@{add\+Ballot}}
+\index{add\+Ballot@{add\+Ballot}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{add\+Ballot()}{addBallot()}}
+{\footnotesize\ttfamily void Candidate\+::add\+Ballot (\begin{DoxyParamCaption}\item[{\hyperlink{classBallot}{Ballot} $\ast$}]{new\+\_\+ballot }\end{DoxyParamCaption})}
+
+This method is responsible for adding new \hyperlink{classBallot}{Ballot} to the end of the list ballots\+For of the \hyperlink{classCandidate}{Candidate}. 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+ballot} & a pointer to the new \hyperlink{classBallot}{Ballot} which will be added to the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Yiwen Xu (xu000515) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCandidate_ac00fcb7914f89cca8bb02ed2e6d6f4e4}\label{classCandidate_ac00fcb7914f89cca8bb02ed2e6d6f4e4}} 
+\index{Candidate@{Candidate}!get\+Assigned\+Status@{get\+Assigned\+Status}}
+\index{get\+Assigned\+Status@{get\+Assigned\+Status}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{get\+Assigned\+Status()}{getAssignedStatus()}}
+{\footnotesize\ttfamily bool Candidate\+::get\+Assigned\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the boolean indicating whether the \hyperlink{classCandidate}{Candidate} object has been declared a winner or a loser yet. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCandidate_a2bd33d32107aa062ef8bd82e8b2ee7e9}\label{classCandidate_a2bd33d32107aa062ef8bd82e8b2ee7e9}} 
+\index{Candidate@{Candidate}!get\+Ballots\+For@{get\+Ballots\+For}}
+\index{get\+Ballots\+For@{get\+Ballots\+For}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{get\+Ballots\+For()}{getBallotsFor()}}
+{\footnotesize\ttfamily std\+::list$<$\hyperlink{classBallot}{Ballot} $\ast$$>$ Candidate\+::get\+Ballots\+For (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the list of pointers to \hyperlink{classBallot}{Ballot} objects assigned to the \hyperlink{classCandidate}{Candidate} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCandidate_abe5eb062e31ef3602b4434e5e9f1e596}\label{classCandidate_abe5eb062e31ef3602b4434e5e9f1e596}} 
+\index{Candidate@{Candidate}!get\+Ballots\+For\+Size@{get\+Ballots\+For\+Size}}
+\index{get\+Ballots\+For\+Size@{get\+Ballots\+For\+Size}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{get\+Ballots\+For\+Size()}{getBallotsForSize()}}
+{\footnotesize\ttfamily int Candidate\+::get\+Ballots\+For\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the the count of how many Ballots objects are assigned to the \hyperlink{classCandidate}{Candidate} objects. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCandidate_a50e7cd31dc68665860932987ad2ffea6}\label{classCandidate_a50e7cd31dc68665860932987ad2ffea6}} 
+\index{Candidate@{Candidate}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily int Candidate\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the Id of the \hyperlink{classCandidate}{Candidate} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCandidate_af862d92e21d66d74f1d5cae92937d3da}\label{classCandidate_af862d92e21d66d74f1d5cae92937d3da}} 
+\index{Candidate@{Candidate}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily std\+::string Candidate\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the name of the \hyperlink{classCandidate}{Candidate} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCandidate_acb99e3ce6e39413c36b1181f67b870ff}\label{classCandidate_acb99e3ce6e39413c36b1181f67b870ff}} 
+\index{Candidate@{Candidate}!get\+When\+Got\+First\+Ballot@{get\+When\+Got\+First\+Ballot}}
+\index{get\+When\+Got\+First\+Ballot@{get\+When\+Got\+First\+Ballot}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{get\+When\+Got\+First\+Ballot()}{getWhenGotFirstBallot()}}
+{\footnotesize\ttfamily double Candidate\+::get\+When\+Got\+First\+Ballot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the double representing the time of when the \hyperlink{classCandidate}{Candidate} object received their first \hyperlink{classBallot}{Ballot} in an election (needed for S\+TV elections). \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCandidate_a329eae2002b3584594dd10c92b5f6f51}\label{classCandidate_a329eae2002b3584594dd10c92b5f6f51}} 
+\index{Candidate@{Candidate}!remove\+Ballot@{remove\+Ballot}}
+\index{remove\+Ballot@{remove\+Ballot}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{remove\+Ballot()}{removeBallot()}}
+{\footnotesize\ttfamily \hyperlink{classBallot}{Ballot}$\ast$ Candidate\+::remove\+Ballot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method removes a \hyperlink{classBallot}{Ballot} from the front of the list ballots\+For for the \hyperlink{classCandidate}{Candidate} and returns that \hyperlink{classBallot}{Ballot}. \begin{DoxyAuthor}{Author}
+Yiwen Xu (xu000515) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCandidate_a9b407c109b00124423fbe4a722a503c2}\label{classCandidate_a9b407c109b00124423fbe4a722a503c2}} 
+\index{Candidate@{Candidate}!set\+Assigned\+Status@{set\+Assigned\+Status}}
+\index{set\+Assigned\+Status@{set\+Assigned\+Status}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{set\+Assigned\+Status()}{setAssignedStatus()}}
+{\footnotesize\ttfamily void Candidate\+::set\+Assigned\+Status (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+This method sets the status indicating whether the \hyperlink{classCandidate}{Candidate} object has been declared a winner or a loser yet. 
+\begin{DoxyParams}{Parameters}
+{\em status} & a boolean indicating whether the \hyperlink{classCandidate}{Candidate} has been assigned or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCandidate_a97be1d696ea97201ec69a75bf708d9f2}\label{classCandidate_a97be1d696ea97201ec69a75bf708d9f2}} 
+\index{Candidate@{Candidate}!set\+When\+Got\+First\+Ballot@{set\+When\+Got\+First\+Ballot}}
+\index{set\+When\+Got\+First\+Ballot@{set\+When\+Got\+First\+Ballot}!Candidate@{Candidate}}
+\subsubsection{\texorpdfstring{set\+When\+Got\+First\+Ballot()}{setWhenGotFirstBallot()}}
+{\footnotesize\ttfamily void Candidate\+::set\+When\+Got\+First\+Ballot (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})}
+
+This method sets the time when the \hyperlink{classCandidate}{Candidate} object received their first \hyperlink{classBallot}{Ballot} in an election (needed for S\+TV elections). 
+\begin{DoxyParams}{Parameters}
+{\em time} & an double representing the number of seconds since the election algorithm started processing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ritch167/csci5801/repo-\/\+Team4/\+Project1/src/candidate.\+h\end{DoxyCompactItemize}

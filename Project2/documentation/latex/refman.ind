@@ -1,0 +1,148 @@
+\begin{theindex}
+
+  \item {add\+Ballot}
+    \subitem {Candidate}, \hyperpage{8}
+  \item {add\+Loser}
+    \subitem {Election}, \hyperpage{13}
+  \item {add\+Winner}
+    \subitem {Election}, \hyperpage{13}
+
+  \indexspace
+
+  \item {Ballot}, \hyperpage{5}
+    \subitem {Ballot}, \hyperpage{5}
+    \subitem {get\+Candidates}, \hyperpage{6}
+    \subitem {get\+Current\+Choice}, \hyperpage{6}
+    \subitem {get\+Id}, \hyperpage{6}
+    \subitem {next\+Choice}, \hyperpage{6}
+    \subitem {set\+Id}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Candidate}, \hyperpage{7}
+    \subitem {add\+Ballot}, \hyperpage{8}
+    \subitem {Candidate}, \hyperpage{8}
+    \subitem {get\+Assigned\+Status}, \hyperpage{9}
+    \subitem {get\+Ballots\+For}, \hyperpage{9}
+    \subitem {get\+Ballots\+For\+Size}, \hyperpage{9}
+    \subitem {get\+Id}, \hyperpage{9}
+    \subitem {get\+Name}, \hyperpage{9}
+    \subitem {get\+When\+Got\+First\+Ballot}, \hyperpage{10}
+    \subitem {remove\+Ballot}, \hyperpage{10}
+    \subitem {set\+Assigned\+Status}, \hyperpage{10}
+    \subitem {set\+When\+Got\+First\+Ballot}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Election}, \hyperpage{11}
+    \subitem {add\+Loser}, \hyperpage{13}
+    \subitem {add\+Winner}, \hyperpage{13}
+    \subitem {Election}, \hyperpage{12}
+    \subitem {get\+Audit\+File\+Path}, \hyperpage{13}
+    \subitem {get\+Ballots}, \hyperpage{13}
+    \subitem {get\+Candidates}, \hyperpage{14}
+    \subitem {get\+Losers}, \hyperpage{14}
+    \subitem {get\+Num\+Seats}, \hyperpage{14}
+    \subitem {get\+Results}, \hyperpage{14}
+    \subitem {get\+Type}, \hyperpage{15}
+    \subitem {get\+Winners}, \hyperpage{15}
+    \subitem {run\+Algorithm}, \hyperpage{15}
+    \subitem {set\+Audit\+File\+Path}, \hyperpage{15}
+    \subitem {write\+To\+Audit\+File}, \hyperpage{16}
+
+  \indexspace
+
+  \item {get\+Assigned\+Status}
+    \subitem {Candidate}, \hyperpage{9}
+  \item {get\+Audit\+File\+Path}
+    \subitem {Election}, \hyperpage{13}
+  \item {get\+Ballots}
+    \subitem {Election}, \hyperpage{13}
+  \item {get\+Ballots\+For}
+    \subitem {Candidate}, \hyperpage{9}
+  \item {get\+Ballots\+For\+Size}
+    \subitem {Candidate}, \hyperpage{9}
+  \item {get\+Candidates}
+    \subitem {Ballot}, \hyperpage{6}
+    \subitem {Election}, \hyperpage{14}
+  \item {get\+Current\+Choice}
+    \subitem {Ballot}, \hyperpage{6}
+  \item {get\+Droop}
+    \subitem {S\+T\+V\+Election}, \hyperpage{20}
+  \item {get\+Id}
+    \subitem {Ballot}, \hyperpage{6}
+    \subitem {Candidate}, \hyperpage{9}
+  \item {get\+Losers}
+    \subitem {Election}, \hyperpage{14}
+  \item {get\+Name}
+    \subitem {Candidate}, \hyperpage{9}
+  \item {get\+Num\+Seats}
+    \subitem {Election}, \hyperpage{14}
+  \item {get\+Results}
+    \subitem {Election}, \hyperpage{14}
+    \subitem {Plurality\+Election}, \hyperpage{18}
+    \subitem {S\+T\+V\+Election}, \hyperpage{21}
+  \item {get\+Shuffle\+Status}
+    \subitem {S\+T\+V\+Election}, \hyperpage{21}
+  \item {get\+Shuffled\+Ballots}
+    \subitem {S\+T\+V\+Election}, \hyperpage{21}
+  \item {get\+Type}
+    \subitem {Election}, \hyperpage{15}
+  \item {get\+When\+Got\+First\+Ballot}
+    \subitem {Candidate}, \hyperpage{10}
+  \item {get\+Winners}
+    \subitem {Election}, \hyperpage{15}
+
+  \indexspace
+
+  \item {next\+Choice}
+    \subitem {Ballot}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Plurality\+Election}, \hyperpage{16}
+    \subitem {get\+Results}, \hyperpage{18}
+    \subitem {Plurality\+Election}, \hyperpage{17}
+    \subitem {run\+Algorithm}, \hyperpage{18}
+
+  \indexspace
+
+  \item {remove\+Ballot}
+    \subitem {Candidate}, \hyperpage{10}
+  \item {run}
+    \subitem {Voting\+App}, \hyperpage{23}
+  \item {run\+Algorithm}
+    \subitem {Election}, \hyperpage{15}
+    \subitem {Plurality\+Election}, \hyperpage{18}
+    \subitem {S\+T\+V\+Election}, \hyperpage{21}
+
+  \indexspace
+
+  \item {S\+T\+V\+Election}, \hyperpage{19}
+    \subitem {get\+Droop}, \hyperpage{20}
+    \subitem {get\+Results}, \hyperpage{21}
+    \subitem {get\+Shuffle\+Status}, \hyperpage{21}
+    \subitem {get\+Shuffled\+Ballots}, \hyperpage{21}
+    \subitem {run\+Algorithm}, \hyperpage{21}
+    \subitem {S\+T\+V\+Election}, \hyperpage{20}
+  \item {set\+Assigned\+Status}
+    \subitem {Candidate}, \hyperpage{10}
+  \item {set\+Audit\+File\+Path}
+    \subitem {Election}, \hyperpage{15}
+  \item {set\+Id}
+    \subitem {Ballot}, \hyperpage{7}
+  \item {set\+When\+Got\+First\+Ballot}
+    \subitem {Candidate}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Voting\+App}, \hyperpage{22}
+    \subitem {run}, \hyperpage{23}
+    \subitem {Voting\+App}, \hyperpage{22}
+
+  \indexspace
+
+  \item {write\+To\+Audit\+File}
+    \subitem {Election}, \hyperpage{16}
+
+\end{theindex}

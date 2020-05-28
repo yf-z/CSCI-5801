@@ -1,0 +1,106 @@
+\hypertarget{classBallot}{}\section{Ballot Class Reference}
+\label{classBallot}\index{Ballot@{Ballot}}
+
+
+The \hyperlink{classBallot}{Ballot} class provides the necessary functionality to represent a voter\textquotesingle{}s ballot in an election. It is able to represent ballots in both plurality and single-\/tranferrable vote elections. A ballot had an Id, a list of the Candidates in the order they were ranked on the ballot, and a variable indicating the current highest ranked \hyperlink{classCandidate}{Candidate} choice remaining on the ballot.  
+
+
+
+
+{\ttfamily \#include $<$ballot.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBallot_a2155c3611bf5c21502e04845386628cf}{Ballot} (int id, std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$ choices)
+\item 
+int \hyperlink{classBallot_a1ff11d3400230f4837fdec904d7e66fd}{get\+Id} ()
+\item 
+void \hyperlink{classBallot_a1dbe98fb3fc76b2fc4f1a0ee40f3c808}{set\+Id} (int id)
+\item 
+std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$ $>$ \hyperlink{classBallot_a7e8730a109ded9c1deeafe75bd1ad55c}{get\+Candidates} ()
+\item 
+int \hyperlink{classBallot_ae76fc12248878a72a1817adc9fc8361c}{get\+Current\+Choice} ()
+\item 
+void \hyperlink{classBallot_a1704d1d5b16cc9d3a8e5a2c64c933311}{next\+Choice} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classBallot}{Ballot} class provides the necessary functionality to represent a voter\textquotesingle{}s ballot in an election. It is able to represent ballots in both plurality and single-\/tranferrable vote elections. A ballot had an Id, a list of the Candidates in the order they were ranked on the ballot, and a variable indicating the current highest ranked \hyperlink{classCandidate}{Candidate} choice remaining on the ballot. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBallot_a2155c3611bf5c21502e04845386628cf}\label{classBallot_a2155c3611bf5c21502e04845386628cf}} 
+\index{Ballot@{Ballot}!Ballot@{Ballot}}
+\index{Ballot@{Ballot}!Ballot@{Ballot}}
+\subsubsection{\texorpdfstring{Ballot()}{Ballot()}}
+{\footnotesize\ttfamily Ballot\+::\+Ballot (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$}]{choices }\end{DoxyParamCaption})}
+
+The constructor for the \hyperlink{classBallot}{Ballot} class which sets the initial id of the ballot and the Candidates that were ranked on the \hyperlink{classBallot}{Ballot}. It defaults the current choice index to 0. 
+\begin{DoxyParams}{Parameters}
+{\em id} & an int that the Id of the \hyperlink{classBallot}{Ballot} object will be set to \\
+\hline
+{\em choices} & a vector of pointers to Candidates ranked on the \hyperlink{classBallot}{Ballot} object (in order) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBallot_a7e8730a109ded9c1deeafe75bd1ad55c}\label{classBallot_a7e8730a109ded9c1deeafe75bd1ad55c}} 
+\index{Ballot@{Ballot}!get\+Candidates@{get\+Candidates}}
+\index{get\+Candidates@{get\+Candidates}!Ballot@{Ballot}}
+\subsubsection{\texorpdfstring{get\+Candidates()}{getCandidates()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classCandidate}{Candidate}$\ast$$>$ Ballot\+::get\+Candidates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the vector of pointers to Candidates ranked on the \hyperlink{classBallot}{Ballot} object (in order) \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classBallot_ae76fc12248878a72a1817adc9fc8361c}\label{classBallot_ae76fc12248878a72a1817adc9fc8361c}} 
+\index{Ballot@{Ballot}!get\+Current\+Choice@{get\+Current\+Choice}}
+\index{get\+Current\+Choice@{get\+Current\+Choice}!Ballot@{Ballot}}
+\subsubsection{\texorpdfstring{get\+Current\+Choice()}{getCurrentChoice()}}
+{\footnotesize\ttfamily int Ballot\+::get\+Current\+Choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the index of the current highest ranked \hyperlink{classCandidate}{Candidate} choice in the vector of Candidates ranked on the \hyperlink{classBallot}{Ballot} object \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classBallot_a1ff11d3400230f4837fdec904d7e66fd}\label{classBallot_a1ff11d3400230f4837fdec904d7e66fd}} 
+\index{Ballot@{Ballot}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Ballot@{Ballot}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily int Ballot\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the Id of the \hyperlink{classBallot}{Ballot} object \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classBallot_a1704d1d5b16cc9d3a8e5a2c64c933311}\label{classBallot_a1704d1d5b16cc9d3a8e5a2c64c933311}} 
+\index{Ballot@{Ballot}!next\+Choice@{next\+Choice}}
+\index{next\+Choice@{next\+Choice}!Ballot@{Ballot}}
+\subsubsection{\texorpdfstring{next\+Choice()}{nextChoice()}}
+{\footnotesize\ttfamily void Ballot\+::next\+Choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method sets the current\+Choice to the next \hyperlink{classCandidate}{Candidate} in order \begin{DoxyAuthor}{Author}
+Yiwen Xu (xu000515) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classBallot_a1dbe98fb3fc76b2fc4f1a0ee40f3c808}\label{classBallot_a1dbe98fb3fc76b2fc4f1a0ee40f3c808}} 
+\index{Ballot@{Ballot}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!Ballot@{Ballot}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void Ballot\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+This method sets the Id of the \hyperlink{classBallot}{Ballot} object 
+\begin{DoxyParams}{Parameters}
+{\em id} & an int that the Id of the \hyperlink{classBallot}{Ballot} object will be set to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ritch167/csci5801/repo-\/\+Team4/\+Project2/src/ballot.\+h\end{DoxyCompactItemize}

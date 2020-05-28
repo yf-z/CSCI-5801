@@ -1,0 +1,4 @@
+<map id="Election" name="Election">
+<area shape="rect" id="node2" href="$classPluralityElection.html" title="The PluralityElection class is a child class of the abstract Election class that provides the necessa..." alt="" coords="5,80,121,107"/>
+<area shape="rect" id="node3" href="$classSTVElection.html" title="The STVElection class is a child class of the abstract Election class that provides the necessary fun..." alt="" coords="145,80,240,107"/>
+</map>

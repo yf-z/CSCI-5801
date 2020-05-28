@@ -1,0 +1,9 @@
+test_STV_10000_ballot_and_5_files_1.csv
+test_STV_10000_ballot_and_5_files_2.csv
+test_STV_10000_ballot_and_5_files_3.csv
+test_STV_10000_ballot_and_5_files_4.csv
+test_STV_10000_ballot_and_5_files_5.csv
+q
+3
+STV
+true

@@ -1,0 +1,239 @@
+\hypertarget{classElection}{}\section{Election Class Reference}
+\label{classElection}\index{Election@{Election}}
+
+
+The \hyperlink{classElection}{Election} class is an abstract class that provides the necessary functionality to represent an election. While non-\/abstract child classes are required to implement their own \hyperlink{classBallot}{Ballot} tallying algorithms and results, the \hyperlink{classElection}{Election} class provides a template of necessary methods and properties that all types of elections will utilize.  
+
+
+
+
+{\ttfamily \#include $<$election.\+h$>$}
+
+
+
+Inheritance diagram for Election\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classElection__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classElection_a4f6dd551dbe4276f97b565ce2fd8fb5d}{Election} (std\+::string type, int seats, std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$ cands, std\+::vector$<$ \hyperlink{classBallot}{Ballot} $\ast$$>$ bals)
+\item 
+std\+::string \hyperlink{classElection_ae49e7f5d36d4afc23ed81b4df4ae658c}{get\+Type} ()
+\item 
+int \hyperlink{classElection_a0b68106ee52f33286364ef5d617d77ee}{get\+Num\+Seats} ()
+\item 
+std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$ $>$ \hyperlink{classElection_a1514ca134f88464b026cc51da5076d29}{get\+Candidates} ()
+\item 
+std\+::vector$<$ \hyperlink{classBallot}{Ballot} $\ast$ $>$ \hyperlink{classElection_abd0c0a7649a3f5d87541e3f65fec7244}{get\+Ballots} ()
+\item 
+std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$ $>$ \hyperlink{classElection_a8cc211952aa00399649c8660eb62189c}{get\+Winners} ()
+\item 
+std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$ $>$ \hyperlink{classElection_a34dfd0c1c6519073d38e85790c839f8b}{get\+Losers} ()
+\item 
+std\+::string \hyperlink{classElection_ae55fafa9a82cca3c20b2343fed3f7250}{get\+Audit\+File\+Path} ()
+\item 
+virtual void \hyperlink{classElection_a059659576ebb0416ecd8005f684461d6}{run\+Algorithm} ()=0
+\item 
+virtual std\+::string \hyperlink{classElection_a6a6f4f301db86628b8d962281a19bf74}{get\+Results} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classElection_ad50f3b2f39c7e7ee96f1987c9dddb926}{set\+Audit\+File\+Path} (std\+::string name)
+\item 
+void \hyperlink{classElection_abd52b6c894a9f2a0a0a104e9f290f9a7}{write\+To\+Audit\+File} ()
+\item 
+void \hyperlink{classElection_a6b6bac6b3c0789a311f1daf8e9d4a31c}{add\+Winner} (\hyperlink{classCandidate}{Candidate} $\ast$win)
+\item 
+void \hyperlink{classElection_a732076e36548e51e8c675598ac4a03dd}{add\+Loser} (\hyperlink{classCandidate}{Candidate} $\ast$lose)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classElection_a50e140cb8138c91be243bec30a78125e}\label{classElection_a50e140cb8138c91be243bec30a78125e}} 
+std\+::string {\bfseries type\+\_\+}
+\item 
+\mbox{\Hypertarget{classElection_a9c116f9c551c84348c026ab9a05ab0f4}\label{classElection_a9c116f9c551c84348c026ab9a05ab0f4}} 
+int {\bfseries num\+Seats\+\_\+}
+\item 
+\mbox{\Hypertarget{classElection_aebd1b5662e37beaac28acae18fda15f6}\label{classElection_aebd1b5662e37beaac28acae18fda15f6}} 
+std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$ $>$ {\bfseries candidates\+\_\+}
+\item 
+\mbox{\Hypertarget{classElection_a309d7e1f884da5b37c9c582f8ffc559c}\label{classElection_a309d7e1f884da5b37c9c582f8ffc559c}} 
+std\+::vector$<$ \hyperlink{classBallot}{Ballot} $\ast$ $>$ {\bfseries ballots\+\_\+}
+\item 
+\mbox{\Hypertarget{classElection_a13d2d174fb9a3b3044f078e8560c226a}\label{classElection_a13d2d174fb9a3b3044f078e8560c226a}} 
+std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$ $>$ {\bfseries winners\+\_\+}
+\item 
+\mbox{\Hypertarget{classElection_ac8e2a461ac014f2c45d1de8ca4d940ec}\label{classElection_ac8e2a461ac014f2c45d1de8ca4d940ec}} 
+std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$ $>$ {\bfseries losers\+\_\+}
+\item 
+\mbox{\Hypertarget{classElection_ad564bb183a5a0679398d0a74c213a92a}\label{classElection_ad564bb183a5a0679398d0a74c213a92a}} 
+std\+::string {\bfseries audit\+File\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classElection_a5dcc64f43ede2f4878fbe15db51b2c4c}\label{classElection_a5dcc64f43ede2f4878fbe15db51b2c4c}} 
+std\+::stringstream {\bfseries audit\+Text\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classElection}{Election} class is an abstract class that provides the necessary functionality to represent an election. While non-\/abstract child classes are required to implement their own \hyperlink{classBallot}{Ballot} tallying algorithms and results, the \hyperlink{classElection}{Election} class provides a template of necessary methods and properties that all types of elections will utilize. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classElection_a4f6dd551dbe4276f97b565ce2fd8fb5d}\label{classElection_a4f6dd551dbe4276f97b565ce2fd8fb5d}} 
+\index{Election@{Election}!Election@{Election}}
+\index{Election@{Election}!Election@{Election}}
+\subsubsection{\texorpdfstring{Election()}{Election()}}
+{\footnotesize\ttfamily Election\+::\+Election (\begin{DoxyParamCaption}\item[{std\+::string}]{type,  }\item[{int}]{seats,  }\item[{std\+::vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$}]{cands,  }\item[{std\+::vector$<$ \hyperlink{classBallot}{Ballot} $\ast$$>$}]{bals }\end{DoxyParamCaption})}
+
+The constructor for the \hyperlink{classElection}{Election} class sets the type of the election, the number of seats in the election, the vector that stores the Candidates who are running in the election, and the vector that stores the Ballots cast in the election. It also defaults the name of the audit file path to the empty string. 
+\begin{DoxyParams}{Parameters}
+{\em type} & a string that indicates the election type \\
+\hline
+{\em seats} & an int that indicates the number of seats in the election \\
+\hline
+{\em cands} & a vector of Candidates who are up for election \\
+\hline
+{\em bals} & a vector of Ballots that were cast in the election \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classElection_a732076e36548e51e8c675598ac4a03dd}\label{classElection_a732076e36548e51e8c675598ac4a03dd}} 
+\index{Election@{Election}!add\+Loser@{add\+Loser}}
+\index{add\+Loser@{add\+Loser}!Election@{Election}}
+\subsubsection{\texorpdfstring{add\+Loser()}{addLoser()}}
+{\footnotesize\ttfamily void Election\+::add\+Loser (\begin{DoxyParamCaption}\item[{\hyperlink{classCandidate}{Candidate} $\ast$}]{lose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+This methods adds a candidate to losers\+\_\+ vector which is a vector of Candidates. \begin{DoxyAuthor}{Author}
+Yifan Zhang(zhan4372) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_a6b6bac6b3c0789a311f1daf8e9d4a31c}\label{classElection_a6b6bac6b3c0789a311f1daf8e9d4a31c}} 
+\index{Election@{Election}!add\+Winner@{add\+Winner}}
+\index{add\+Winner@{add\+Winner}!Election@{Election}}
+\subsubsection{\texorpdfstring{add\+Winner()}{addWinner()}}
+{\footnotesize\ttfamily void Election\+::add\+Winner (\begin{DoxyParamCaption}\item[{\hyperlink{classCandidate}{Candidate} $\ast$}]{win }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+This methods adds a candidate to winners\+\_\+ vector which is a vector of Candidates. \begin{DoxyAuthor}{Author}
+Yifan Zhang(zhan4372) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_ae55fafa9a82cca3c20b2343fed3f7250}\label{classElection_ae55fafa9a82cca3c20b2343fed3f7250}} 
+\index{Election@{Election}!get\+Audit\+File\+Path@{get\+Audit\+File\+Path}}
+\index{get\+Audit\+File\+Path@{get\+Audit\+File\+Path}!Election@{Election}}
+\subsubsection{\texorpdfstring{get\+Audit\+File\+Path()}{getAuditFilePath()}}
+{\footnotesize\ttfamily std\+::string Election\+::get\+Audit\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the path for the audit file in the \hyperlink{classElection}{Election} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_abd0c0a7649a3f5d87541e3f65fec7244}\label{classElection_abd0c0a7649a3f5d87541e3f65fec7244}} 
+\index{Election@{Election}!get\+Ballots@{get\+Ballots}}
+\index{get\+Ballots@{get\+Ballots}!Election@{Election}}
+\subsubsection{\texorpdfstring{get\+Ballots()}{getBallots()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classBallot}{Ballot}$\ast$$>$ Election\+::get\+Ballots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the vector of \hyperlink{classBallot}{Ballot} pointers in the \hyperlink{classElection}{Election} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_a1514ca134f88464b026cc51da5076d29}\label{classElection_a1514ca134f88464b026cc51da5076d29}} 
+\index{Election@{Election}!get\+Candidates@{get\+Candidates}}
+\index{get\+Candidates@{get\+Candidates}!Election@{Election}}
+\subsubsection{\texorpdfstring{get\+Candidates()}{getCandidates()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classCandidate}{Candidate}$\ast$$>$ Election\+::get\+Candidates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the vector of \hyperlink{classCandidate}{Candidate} pointers in the \hyperlink{classElection}{Election} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_a34dfd0c1c6519073d38e85790c839f8b}\label{classElection_a34dfd0c1c6519073d38e85790c839f8b}} 
+\index{Election@{Election}!get\+Losers@{get\+Losers}}
+\index{get\+Losers@{get\+Losers}!Election@{Election}}
+\subsubsection{\texorpdfstring{get\+Losers()}{getLosers()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classCandidate}{Candidate}$\ast$$>$ Election\+::get\+Losers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the losers which is a vector of \hyperlink{classCandidate}{Candidate} pointers in the \hyperlink{classElection}{Election} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_a0b68106ee52f33286364ef5d617d77ee}\label{classElection_a0b68106ee52f33286364ef5d617d77ee}} 
+\index{Election@{Election}!get\+Num\+Seats@{get\+Num\+Seats}}
+\index{get\+Num\+Seats@{get\+Num\+Seats}!Election@{Election}}
+\subsubsection{\texorpdfstring{get\+Num\+Seats()}{getNumSeats()}}
+{\footnotesize\ttfamily int Election\+::get\+Num\+Seats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the number of the seats of the \hyperlink{classElection}{Election} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_a6a6f4f301db86628b8d962281a19bf74}\label{classElection_a6a6f4f301db86628b8d962281a19bf74}} 
+\index{Election@{Election}!get\+Results@{get\+Results}}
+\index{get\+Results@{get\+Results}!Election@{Election}}
+\subsubsection{\texorpdfstring{get\+Results()}{getResults()}}
+{\footnotesize\ttfamily virtual std\+::string Election\+::get\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This pure virtual method will be implemented in the child classes of \hyperlink{classElection}{Election} and will be responsible for compiling the results for the specific election type 
+
+Implemented in \hyperlink{classSTVElection_ae7efa73091c87add327d71ff5f943c3c}{S\+T\+V\+Election}, and \hyperlink{classPluralityElection_a60f88a34588ca87678b0f5367adf1a55}{Plurality\+Election}.
+
+\mbox{\Hypertarget{classElection_ae49e7f5d36d4afc23ed81b4df4ae658c}\label{classElection_ae49e7f5d36d4afc23ed81b4df4ae658c}} 
+\index{Election@{Election}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Election@{Election}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily std\+::string Election\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the type of the \hyperlink{classElection}{Election} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_a8cc211952aa00399649c8660eb62189c}\label{classElection_a8cc211952aa00399649c8660eb62189c}} 
+\index{Election@{Election}!get\+Winners@{get\+Winners}}
+\index{get\+Winners@{get\+Winners}!Election@{Election}}
+\subsubsection{\texorpdfstring{get\+Winners()}{getWinners()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classCandidate}{Candidate}$\ast$$>$ Election\+::get\+Winners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the winners which is a vector of \hyperlink{classCandidate}{Candidate} pointers in the \hyperlink{classElection}{Election} object. \begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_a059659576ebb0416ecd8005f684461d6}\label{classElection_a059659576ebb0416ecd8005f684461d6}} 
+\index{Election@{Election}!run\+Algorithm@{run\+Algorithm}}
+\index{run\+Algorithm@{run\+Algorithm}!Election@{Election}}
+\subsubsection{\texorpdfstring{run\+Algorithm()}{runAlgorithm()}}
+{\footnotesize\ttfamily virtual void Election\+::run\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This pure virtual method will be implemented in the child classes of \hyperlink{classElection}{Election} and will be responsible for running the speicific election type\textquotesingle{}s vote tallying algorithm. 
+
+Implemented in \hyperlink{classSTVElection_ac4e0339e3cb97add1a22c9af7233df17}{S\+T\+V\+Election}, and \hyperlink{classPluralityElection_a9517806e8ba40496c49013acc7ad9ca5}{Plurality\+Election}.
+
+\mbox{\Hypertarget{classElection_ad50f3b2f39c7e7ee96f1987c9dddb926}\label{classElection_ad50f3b2f39c7e7ee96f1987c9dddb926}} 
+\index{Election@{Election}!set\+Audit\+File\+Path@{set\+Audit\+File\+Path}}
+\index{set\+Audit\+File\+Path@{set\+Audit\+File\+Path}!Election@{Election}}
+\subsubsection{\texorpdfstring{set\+Audit\+File\+Path()}{setAuditFilePath()}}
+{\footnotesize\ttfamily void Election\+::set\+Audit\+File\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+This method sets the audit\+File\+Path of the \hyperlink{classElection}{Election} object 
+\begin{DoxyParams}{Parameters}
+{\em name} & a string that the audit\+File\+Path of the \hyperlink{classElection}{Election} object will be set to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brendan Ritchie (ritch167) 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classElection_abd52b6c894a9f2a0a0a104e9f290f9a7}\label{classElection_abd52b6c894a9f2a0a0a104e9f290f9a7}} 
+\index{Election@{Election}!write\+To\+Audit\+File@{write\+To\+Audit\+File}}
+\index{write\+To\+Audit\+File@{write\+To\+Audit\+File}!Election@{Election}}
+\subsubsection{\texorpdfstring{write\+To\+Audit\+File()}{writeToAuditFile()}}
+{\footnotesize\ttfamily void Election\+::write\+To\+Audit\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+This methods writes the content of stingstream audit\+Text\+\_\+ to audit files with file path as audit\+File\+Path\+\_\+. \begin{DoxyAuthor}{Author}
+Yifan Zhang(zhan4372) 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ritch167/csci5801/repo-\/\+Team4/\+Project2/src/election.\+h\end{DoxyCompactItemize}

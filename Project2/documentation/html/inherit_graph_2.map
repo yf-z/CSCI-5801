@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classElection.html" title="The Election class is an abstract class that provides the necessary functionality to represent an ele..." alt="" coords="5,31,75,57"/>
+<area shape="rect" id="node2" href="$classPluralityElection.html" title="The PluralityElection class is a child class of the abstract Election class that provides the necessa..." alt="" coords="123,5,239,32"/>
+<area shape="rect" id="node3" href="$classSTVElection.html" title="The STVElection class is a child class of the abstract Election class that provides the necessary fun..." alt="" coords="133,56,228,83"/>
+</map>
